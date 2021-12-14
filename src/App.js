@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { Input } from 'antd';
+import { useSelector, useDispatch } from 'react-redux';
+import { incNumber, decNumber} from './actions/index';
+import { Button } from 'antd';
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import './App.css';
 
 function App() {
+  const myState = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className="wrapper">
+      <h1 className='counter-Heading'>Counter App</h1>
+      <div className="counter">
+      <Button className='btn-decrease' onClick={ () => dispatch(decNumber ())} type="primary" shape="round" icon={<MinusOutlined />} />
+      <Input size="large" placeholder="large size" value={myState} className='input'  disabled  />
+      <Button className='btn-increase' onClick={ () => dispatch(incNumber ())} type="primary" shape="round" icon={<PlusOutlined />} />
+      </div>
     </div>
+    </div>
+    
   );
 }
 

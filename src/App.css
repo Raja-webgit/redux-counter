@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+ 
+  height: 600px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
+  
+}
+.wrapper{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 4rem;
+}
+.counter-Heading{
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.counter-decrease{
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 2rem;
+  color: blue;
+}
+.input{
+  padding: 12px;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.counter-increase{
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 2rem;
+  color: orangered;
+}
+.counter{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-decrease {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}
+.btn-decrease {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   text-decoration: none;
+ }
+
+ .btn-increase {background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%)}
+ .btn-increase {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn-increase:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
   }
-}
+ .symbol{
+   padding: .7rem;
+   font-size: 1.6rem;
+  
+ }
+ 
+
